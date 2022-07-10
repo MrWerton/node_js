@@ -21,6 +21,10 @@ export class UserRepository implements IUserRepository{
         const users =await this.repository.find()
         return users;
     }
+    public async findByName(name: string): Promise<User | null> {
+        const user = await this.repository.findOneBy({ name });
+        return user;
+    }
 
 }
 
