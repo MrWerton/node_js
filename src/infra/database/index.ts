@@ -1,6 +1,6 @@
 import {DataSource} from 'typeorm'
 import { User } from '../../modules/User/entities/User'
-import { PostRefactoring1657430456216 } from '../1657430456216-PostRefactoring'
+import { User1657435834925 } from './migrations/1657435834925-User'
 
 export const dataSource = new DataSource({
     type: "sqlite",
@@ -8,7 +8,7 @@ export const dataSource = new DataSource({
     synchronize: false,
     logging: false,
     entities: [User],
-    migrations: [PostRefactoring1657430456216]
+    migrations: [User1657435834925]
 })
 
 export async function createConnection(){
