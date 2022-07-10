@@ -3,7 +3,7 @@ import express from 'express';
 import { userRouter } from './routes/User.routes';
 import { createConnection } from "./infra/database";
 
-import './shared/containere'
+import './shared/container'
 
 const app = express()
 app.use(express.json());
