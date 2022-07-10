@@ -10,7 +10,7 @@ interface IRequest{
 export class CreateUserUseCase{
     constructor(
         @inject("UserRepository")
-        private _userRepository: IUserRepository //dependencyInjector
+        private _userRepository: IUserRepository
     ){}
 
     public async execute({name, age}: IRequest): Promise<void>{
